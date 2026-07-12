@@ -1,5 +1,7 @@
 import app from './index.js'
 import dotenv from 'dotenv'
+import './config/redis.js'
+
 
 dotenv.config()
 

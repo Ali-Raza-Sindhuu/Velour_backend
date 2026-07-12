@@ -1,6 +1,7 @@
 import express from 'express'
 import authRoutes from './routers/auth_routes.js'
 import cors from 'cors'
+import cookieParser from 'cookie-parser'
 
 const app = express()
 
@@ -12,6 +13,9 @@ app.use(
 );
 //Receive the data in json format
 app.use(express.json())
+
+//Cookies Data
+app.use(cookieParser())
 
 //Global Middleware
 app.use((req, res, next) => {
